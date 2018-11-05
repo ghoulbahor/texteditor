@@ -1,0 +1,12 @@
+<div class="file">
+    <textarea cols="80" rows="5" class="text-input" #textInput></textarea>
+    <button (click)="saveText()">Save text</button>
+  <div #textResult>
+    
+  </div>
+  <p *ngFor="let paragraph of (text$ | async)" (click)="selectParagraphForEdit($event)">
+      <span *ngFor="let span of paragraph" (click)="selectWordForEdit($event)">
+        {{ span }}
+      </span>
+  </p>
+</div>

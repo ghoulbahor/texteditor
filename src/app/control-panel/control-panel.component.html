@@ -1,0 +1,18 @@
+<div class="format-actions">
+  <button class="format-action" type="button" (click)="toggleBold()">
+    <b>B</b>
+  </button>
+  <button class="format-action" type="button" (click)="toggleItalic()">
+    <i>I</i>
+  </button>
+  <button class="format-action" type="button" (click)="toggleUnderlined()">
+    <u>U</u>
+  </button>
+</div>
+
+<div class="format-actions">
+  <button class="format-action" type="button" (click)="indentRight()">&rarr;</button>
+  <button class="format-action" type="button" (click)="indentLeft()">&larr;</button>
+  <input #colorPicker class="format-action" type="color" (change)="setColor()">
+  <input class="format-action" type="text" #selectedWord value="{{textService.selectedWord?.innerText}}" (input)="editSelectedWord($event)">
+</div>
